@@ -1,0 +1,120 @@
+{% include html_head.html %}
+{% include main_nav.html %}
+
+<!-- Header -->
+<div class="row">
+  <div class="large-12 columns">
+    <img src="http://placehold.it/1600x400&text=EventImage"><br><br>
+  </div>
+</div>
+
+<!-- End Header -->
+
+<div class="row">    
+    
+    <!-- Main Content Section -->
+    <!-- This has been source ordered to come first in the markup (and on small devices) but to be to the right of the nav on larger screens -->
+    <div class="large-9 push-3 columns">
+	
+	{{content}}
+	{% if page.previous.url and page.next.url %}
+	        <a class="four columns" href="{{ site.baseurl }}{{page.previous.url}}" title="Previous Post: {{page.previous.title}}">Previous</a>
+			<a class="four columns" href="{{ site.baseurl }}/updates" title="Update Index">All Updates</a>
+			<a class="four columns" href="{{ site.baseurl }}{{page.next.url}}" title="Next Post: {{page.next.title}}">Next</a>
+	  {% else %}
+		{% if page.previous.url %}
+			<a class="six columns" href="{{ site.baseurl }}{{page.previous.url}}" title="Previous Post: {{page.previous.title}}">Previous</a>
+			<a class="six columns" href="{{ site.baseurl }}/updates" title="Update Index">All Updates</a>
+		{% else %}
+		<a class="four columns" href="{{ site.baseurl }}/updates" title="Update Index">All Updates</a>
+		<a class="four columns" href="{{ site.baseurl }}{{page.next.url}}" title="Next Post: {{page.next.title}}">Next</a>
+		{%endif%}
+	  {% endif %}
+	
+	
+		<nav class="breadcrumbs">
+		  <a href="#">Home</a>
+		  <a href="#">Events</a>
+		  <a class="unavailable" href="#">2013</a>
+		  <a class="current" href="#">This is an Event</a>
+		</nav>
+		<h3>National Planning Awards <small>Closing Date 23 JUN 2013</small></h3>
+		<div id="map_container" class="large-6 columns">
+			<img src="http://a.tiles.mapbox.com/v3/rusty.map-bkyvw9y9/-5.929927745450819,54.59635597273454,14/500x300.png" />
+		</div>
+		<div class="large-6 columns">
+			<table>
+				<tr>
+					<th>Date</th>
+					<td>20 JUN 2013</td>
+				</tr>
+				<tr>
+					<th>Venue</th>
+					<td>Scottish Provident Building, 7 Donegal Square West, Belfast BT1 6JH, UK</td>
+				</tr>
+				<tr>
+					<th>Price</th>
+					<td>Free</td>
+				</tr>
+				<tr>
+					<th>Organizer</th>
+					<td>GDA Branch</td>
+				</tr>
+				<tr>
+					<th colspan="2"><a href="#register" class="button medium radius success">Register Now</a></th>
+				</tr>
+			</table>
+			
+		</div>
+      
+      
+      <p>Bacon ipsum dolor sit amet salami ham hock biltong ball tip drumstick sirloin pancetta meatball short loin. Venison tail chuck pork chop, andouille ball tip beef ribs flank boudin bacon. Salami andouille pork belly short ribs flank cow. Salami sirloin turkey kielbasa. Sausage venison pork loin leberkas chuck short loin, cow ham prosciutto pastrami jowl. Ham hock jerky tri-tip, fatback hamburger shoulder swine pancetta ground round. Tri-tip prosciutto meatball turkey, brisket spare ribs shankle chuck cow chicken ham hock boudin meatloaf jowl.</p>
+ 
+      <p>Ground round pastrami pork loin tenderloin jerky. Jerky spare ribs biltong, ham hock ham capicola pork. Jerky turducken pork, meatloaf sausage capicola swine corned beef turkey short loin. Tongue prosciutto pork loin, ground round spare ribs venison kielbasa strip steak.</p>
+ 
+      <p>Hamburger bresaola turkey t-bone, leberkas salami pork chop ham hock beef ribs. Rump biltong meatball venison, short ribs pork loin shank shankle corned beef beef. Cow salami jowl short loin hamburger fatback. Short ribs pork belly shoulder pastrami drumstick salami corned beef ham hock bresaola. Swine filet mignon cow sausage ball tip. Cow ribeye ground round, sausage pork loin pig beef ball tip turkey boudin.</p>
+ 
+      <p>Prosciutto ball tip filet mignon andouille frankfurter chicken rump sausage meatball. Filet mignon meatloaf ground round andouille ham hock pork. Bresaola short loin meatball chuck hamburger pig. Turkey venison chuck, tongue fatback tail swine jerky corned beef shank kielbasa prosciutto ribeye ham tri-tip. Rump bacon pork belly meatloaf shoulder short loin meatball kielbasa pork loin tongue bresaola brisket corned beef jowl prosciutto. Beef ribs shankle short ribs pork belly corned beef fatback pork chop tongue biltong boudin strip steak sirloin meatloaf pancetta.</p>
+      <h3>Registration</h3>
+	  <div id="register" style="width:100%; text-align:left;" >
+		<iframe  src="http://www.eventbrite.ie/tickets-external?eid=5231948900&ref=etckt&v=2" frameborder="0" height="406" width="100%" vspace="0" hspace="0" marginheight="5" marginwidth="5" scrolling="auto" allowtransparency="true"></iframe>
+		<div style="font-family:Helvetica, Arial; font-size:10px; padding:5px 0 5px; margin:2px; width:100%; text-align:left;" >
+			<a style="color:#ddd; text-decoration:none;" target="_blank" href="http://www.eventbrite.ie/r/etckt">Online Ticketing</a>
+			<span style="color:#ddd;"> for </span>
+			<a style="color:#ddd; text-decoration:none;" target="_blank" href="http://ipiconf13.eventbrite.ie?ref=etckt">IPI Planning Conf 13</a>
+			<span style="color:#ddd;">powered by</span>
+			<a style="color:#ddd; text-decoration:none;" target="_blank" href="http://www.eventbrite.ie?ref=etckt">Eventbrite</a>
+		</div>
+	  </div>
+	<h3>Questions? <small>Contact Us</small></h3>
+	<p>Contact Details Go here</p>
+    </div>
+    
+    
+    <!-- Nav Sidebar -->
+    <!-- This is source ordered to be pulled to the left on larger screens -->
+    <div class="large-3 pull-9 columns">
+        <h3 class="home" style="background: #518F9A;
+		padding: 1em 0;
+		margin-bottom: 0;
+		color: #fff;">Events</h3>
+      <ul class="side-nav">
+	
+		
+        <li><a href="#">Events Calendar</a></li>
+        <li><a href="#">National Planning Awards 2013</a></li>
+        <li><a href="#">National Planning Conference</a></li>
+        <li><a href="#">Autumn Planning Conference</a></li>
+        <li><a href="#">Submit Event</a></li>
+        <li><a href="#">Section 6</a></li>
+      </ul>
+      
+      <p><img src="http://placehold.it/320x240&text=Ad" /></p>
+        
+    </div>
+    
+  </div>
+
+{% include footer.html %}
+{% include html_end.html %}
+

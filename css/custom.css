@@ -1,0 +1,83 @@
+#logo {
+width: 100px;
+height: 100px;
+background: url(../img/IPI-logo.png);
+display: block;
+margin: 8px auto 0;
+position: relative;
+z-index: 8888;
+}
+
+.top-bar {height:54px;margin-bottom:0;}
+
+footer {background:#232323;color:#fff; margin-top:96px;}
+body {background:#f9f9f9;}
+
+h3.home {text-transform: uppercase;
+font-size: 1.5em;
+letter-spacing: 3px;
+text-align: center;}
+.top-bar-section ul li {min-width:80px;}
+
+.calendar_date	{
+	/*font-family: Georgia, "Times New Roman", Times, serif;*/
+	background-image: url(../img/big-calendar-bg.gif);
+	display: block;
+	width: 40px;
+	height: 52px;
+	color: #002e5f;
+	
+	top: 0;
+	left: 0;}
+span.day {
+	padding: 8px 0 0 0;
+	}
+	span.day {
+	padding: 5px 0 3px 0;
+	display: block;
+	width: 37px;
+	font-weight: bold;
+	font-size: 150%;
+	text-align: center;
+	}
+	span.month {
+	display: block;
+	width: 37px;
+	text-align: center;
+	font-weight: bold;
+	font-size: 90%;
+	text-transform: uppercase;
+	}
+	/* Blog: Archive */
+
+	.blog-archive {
+	  padding-left: 5%;
+	  padding-right: 5%;
+	}
+
+	.blog-archive .blog-date {
+	  color: #8F99A0;
+	  margin-right: 0;
+	  border-right-width: 0;
+	  float: left;
+	  width: 18.181818%;
+	}
+
+	.blog-archive .blog-title {
+	  margin-left: 20%;
+	}
+
+	.blog-archive .blog-month {
+	  margin: 40px 0 10px;
+	  font-size:16px;
+	}
+
+	.blog-archive .blog-month:first-child {
+	  margin-top: 0;
+	}
+
+	.blog-archive a {
+	  border-bottom: 1px solid #ddd;
+	  padding: 10px 0;
+	  display:block;
+	}
