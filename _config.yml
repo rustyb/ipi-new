@@ -1,6 +1,8 @@
 baseurl: http://www.dublinspaceinvaders.co
 permalink: pretty
 paginate: 10
+relative_permalinks: true
+markdown: rdiscount
 prose:
   rooturl: '_posts'
   media: "media"

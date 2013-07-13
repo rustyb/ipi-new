@@ -11,7 +11,6 @@
 	          </a>
 			</h1>
 	          
-	        
 	      </li>	
 		</div>
 	      
@@ -23,7 +22,18 @@
     <!-- Left Nav Section -->
 	
     <ul class="left">
-      	<li class="has-dropdown"><a href="#">Events</a>
+	{% assign nav = 'left' %}
+		{% for node in site.posts %}
+		      {% if nav == node.main_nav  %}
+		      	{% if page.url == node.url %}
+		      	 <li class="active"><a href="{{ site.baseurl }}{{node.url}}" class="active">{{node.title}}</a></li>
+		      	{% else %}
+		      	<li><a href="{{ site.baseurl }}{{node.url}}">{{node.title}}</a></li>
+		      	{% endif %}
+		      {% endif %}
+		  {% endfor %}
+			
+      <!--	<li class="has-dropdown"><a href="#">Events</a>
 
 	        <ul class="dropdown">
 	          <li><a href="#">National Planning Awards</a>
@@ -33,7 +43,7 @@
 	      </li>
       <li class="active"><a href="#">Membership and Careers</a></li>
       
-      <li><a href="#">Education</a></li>
+      <li><a href="#">Education</a></li>-->
       
       
       
@@ -44,9 +54,18 @@
      INSERT IPI LOGO IN THE CENTRE OF THE PAGE BETWEEN BOTH OF THESE -->
     <!-- Right Nav Section -->
     <ul class="right">
-               
-                <li><a href="#">Blog</a></li>
-				<li><a href="#">Latest News</a></li>
+               {% assign nav1 = 'right' %}
+				{% for node in site.posts %}
+				      {% if nav1 == node.main_nav  %}
+				      	{% if page.url == node.url %}
+				      	 <li class="active"><a href="{{ site.baseurl }}{{node.url}}" class="active">{{node.title}}</a></li>
+				      	{% else %}
+				      	<li><a href="{{ site.baseurl }}{{node.url}}">{{node.title}}</a></li>
+				      	{% endif %}
+				      {% endif %}
+				  {% endfor %}
+               <!--<li><a href="#">Blog</a></li>
+				<li><a href="{{site.baseurl}}/news">Latest News</a></li>
             	<li class="has-dropdown"><a href="#">Advice</a>
 			        <ul class="dropdown">
 			          <li><label>Dropdown Level 1 Label</label></li>
@@ -56,12 +75,12 @@
 			          <li class="divider"></li>
 			          <li><label>Find a Planner</label></li>
 			        </ul>
-			      </li>
+			      </li>-->
                 <li><a href="#">Login</a></li>
     </ul>
 
 <div class="hide-for-small">
-	<a href="{{site.baseurl}}" id='logo'>
+	<a href="{{site.baseurl}}/" id='logo'>
 			<!--<img src="{{site.baseurl}}/img/IPI-logo.png">-->
 		</a>
 </div>	

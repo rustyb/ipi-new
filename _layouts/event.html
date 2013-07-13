@@ -1,23 +1,30 @@
 {% include html_head.html %}
+{% assign nav = 'left' %}
+{% assign nav1 = 'right' %}
 {% include main_nav.html %}
 
 <!-- Header -->
-<div class="row">
-  <div class="large-12 columns">
-    <img src="http://placehold.it/1600x400&text=EventImage"><br><br>
-  </div>
+<div style="background:#28353d;">
+	<div class="row">
+		<div class="large-7 columns small-centered large-centered" style="text-align:center;padding:60px 30px 30px 30px;color:#fff;">
+
+			<h3 style="color:#fff;">{{page.title}}<small><br />Closing Date {{ page.close-date | date: "%d %b %Y" }}</small></h3>
+		</div>
+	</div>
+	
 </div>
+
 
 <!-- End Header -->
 
-<div class="row">    
+<div class="row" style="margin-top:30px;">    
     
     <!-- Main Content Section -->
     <!-- This has been source ordered to come first in the markup (and on small devices) but to be to the right of the nav on larger screens -->
-    <div class="large-9 push-3 columns">
+ <div class="large-9 push-3 columns">
 	
-	{{content}}
-	{% if page.previous.url and page.next.url %}
+	
+<!--	{% if page.previous.url and page.next.url %}
 	        <a class="four columns" href="{{ site.baseurl }}{{page.previous.url}}" title="Previous Post: {{page.previous.title}}">Previous</a>
 			<a class="four columns" href="{{ site.baseurl }}/updates" title="Update Index">All Updates</a>
 			<a class="four columns" href="{{ site.baseurl }}{{page.next.url}}" title="Next Post: {{page.next.title}}">Next</a>
@@ -30,35 +37,35 @@
 		<a class="four columns" href="{{ site.baseurl }}{{page.next.url}}" title="Next Post: {{page.next.title}}">Next</a>
 		{%endif%}
 	  {% endif %}
+	-->
 	
-	
-		<nav class="breadcrumbs">
+		<nav class="breadcrumbs" style="margin-bottom:30px;">
 		  <a href="#">Home</a>
-		  <a href="#">Events</a>
+		  <a href="{{site.baseurl}}/events">Events</a>
 		  <a class="unavailable" href="#">2013</a>
-		  <a class="current" href="#">This is an Event</a>
+		  <a class="current" href="{{site.baseurl}}{{page.url}}">{{page.title}}</a>
 		</nav>
-		<h3>National Planning Awards <small>Closing Date 23 JUN 2013</small></h3>
-		<div id="map_container" class="large-6 columns">
+	<!--	<h3>{{page.title}} <small>Closing Date {{ page.close-date | date: "%d %b %Y" }}</small></h3> -->
+		<div id="map_container" class="hide-for-medium-up">
 			<img src="http://a.tiles.mapbox.com/v3/rusty.map-bkyvw9y9/-5.929927745450819,54.59635597273454,14/500x300.png" />
 		</div>
-		<div class="large-6 columns">
-			<table>
+		<div class="hide-for-medium-up">
+			<table style="width:100%">
 				<tr>
 					<th>Date</th>
-					<td>20 JUN 2013</td>
+					<td>{{ page.day | date: "%d %b %Y" }}</td>
 				</tr>
 				<tr>
 					<th>Venue</th>
-					<td>Scottish Provident Building, 7 Donegal Square West, Belfast BT1 6JH, UK</td>
+					<td>{{page.location}}</td>
 				</tr>
 				<tr>
 					<th>Price</th>
-					<td>Free</td>
+					<td>{{page.price}}</td>
 				</tr>
 				<tr>
 					<th>Organizer</th>
-					<td>GDA Branch</td>
+					<td>{{page.organizer}}</td>
 				</tr>
 				<tr>
 					<th colspan="2"><a href="#register" class="button medium radius success">Register Now</a></th>
@@ -66,15 +73,8 @@
 			</table>
 			
 		</div>
-      
-      
-      <p>Bacon ipsum dolor sit amet salami ham hock biltong ball tip drumstick sirloin pancetta meatball short loin. Venison tail chuck pork chop, andouille ball tip beef ribs flank boudin bacon. Salami andouille pork belly short ribs flank cow. Salami sirloin turkey kielbasa. Sausage venison pork loin leberkas chuck short loin, cow ham prosciutto pastrami jowl. Ham hock jerky tri-tip, fatback hamburger shoulder swine pancetta ground round. Tri-tip prosciutto meatball turkey, brisket spare ribs shankle chuck cow chicken ham hock boudin meatloaf jowl.</p>
- 
-      <p>Ground round pastrami pork loin tenderloin jerky. Jerky spare ribs biltong, ham hock ham capicola pork. Jerky turducken pork, meatloaf sausage capicola swine corned beef turkey short loin. Tongue prosciutto pork loin, ground round spare ribs venison kielbasa strip steak.</p>
- 
-      <p>Hamburger bresaola turkey t-bone, leberkas salami pork chop ham hock beef ribs. Rump biltong meatball venison, short ribs pork loin shank shankle corned beef beef. Cow salami jowl short loin hamburger fatback. Short ribs pork belly shoulder pastrami drumstick salami corned beef ham hock bresaola. Swine filet mignon cow sausage ball tip. Cow ribeye ground round, sausage pork loin pig beef ball tip turkey boudin.</p>
- 
-      <p>Prosciutto ball tip filet mignon andouille frankfurter chicken rump sausage meatball. Filet mignon meatloaf ground round andouille ham hock pork. Bresaola short loin meatball chuck hamburger pig. Turkey venison chuck, tongue fatback tail swine jerky corned beef shank kielbasa prosciutto ribeye ham tri-tip. Rump bacon pork belly meatloaf shoulder short loin meatball kielbasa pork loin tongue bresaola brisket corned beef jowl prosciutto. Beef ribs shankle short ribs pork belly corned beef fatback pork chop tongue biltong boudin strip steak sirloin meatloaf pancetta.</p>
+      {{content}}
+
       <h3>Registration</h3>
 	  <div id="register" style="width:100%; text-align:left;" >
 		<iframe  src="http://www.eventbrite.ie/tickets-external?eid=5231948900&ref=etckt&v=2" frameborder="0" height="406" width="100%" vspace="0" hspace="0" marginheight="5" marginwidth="5" scrolling="auto" allowtransparency="true"></iframe>
@@ -88,7 +88,7 @@
 	  </div>
 	<h3>Questions? <small>Contact Us</small></h3>
 	<p>Contact Details Go here</p>
-    </div>
+</div>
     
     
     <!-- Nav Sidebar -->
@@ -98,6 +98,33 @@
 		padding: 1em 0;
 		margin-bottom: 0;
 		color: #fff;">Events</h3>
+		<div id="map_container" class="hide-for-small">
+			<img src="http://a.tiles.mapbox.com/v3/rusty.map-bkyvw9y9/-5.929927745450819,54.59635597273454,14/500x300.png" />
+		</div>
+		<div class="hide-for-small">
+			<table style="width:100%">
+				<tr>
+					<th>Date</th>
+					<td>{{ page.day | date: "%d %b %Y" }}</td>
+				</tr>
+				<tr>
+					<th>Venue</th>
+					<td>{{page.location}}</td>
+				</tr>
+				<tr>
+					<th>Price</th>
+					<td>{{page.price}}</td>
+				</tr>
+				<tr>
+					<th>Organizer</th>
+					<td>{{page.organizer}}</td>
+				</tr>
+				<tr>
+					<th colspan="2"><a href="#register" class="button medium radius success">Register Now</a></th>
+				</tr>
+			</table>
+			
+		</div>
       <ul class="side-nav">
 	
 		
@@ -110,10 +137,10 @@
       </ul>
       
       <p><img src="http://placehold.it/320x240&text=Ad" /></p>
-        
+       	
     </div>
     
-  </div>
+</div>
 
 {% include footer.html %}
 {% include html_end.html %}

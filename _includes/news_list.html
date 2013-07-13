@@ -1,17 +1,37 @@
 
       	{% for post in site.categories.news %}
       		
-      	<article>
+      	<!--<article>
 		             <div class="row">
-		               <div class="large-12 columns">
-		                 </div>
-						 <div class="large-3 columns"><img class="radius" src="http://placehold.it/320x240&text=Ad"></div><div class="large-9 columns">
-							<h6 class="subheader"><small>Posted by Colin on {{ post.date | date: "%d %B %y" }}</small></h6>
+		               
+						 <div class="large-3 columns"><img class="radius" src="http://placehold.it/320x240&text=Ad"></div>
+							<div class="large-9 columns">
+							<h6 class="subheader"><small>{{ post.date | date: "%d %b %Y" }} | By Colin Broderick</small></h6>
 							<h5><a href="{{ site.baseurl }}{{post.url}}">{{ post.title }}</a></h5>
 						 </div>
 		               
 		             </div><hr>
+		</article>-->
+		<article style="margin-bottom:50px;">
+		             <div class="row" style="background:#fff;">
+		             <div class="large-10 small-12 small-centered large-centered columns" >
+		                 	<h6 class="subheader" style="text-align:center;"><small><a href="{{ site.baseurl }}{{post.url}}">{{ post.date | date: "%d %b %Y" }}</a> | By Colin Broderick</small></h6>
+							<h5 style="text-align:center;"><a href="{{ site.baseurl }}{{post.url}}">{{ post.title }}</a></h5>
+							{{post.excerpt}}
+							<div class="read-more">
+								<a href="{{ site.baseurl }}{{post.url}}">Read More</a>
+							</div>
+							
+		             </div>
+		
 		</article>
 		
 		{% endfor %}
-      
+      	<div style="background:#28353d;margin-top:30px;">	
+			<div class="row">
+				<div class="large-5 columns small-centered large-centered" style="text-align:center;padding:30px;color:#fff;">
+
+					<a href="{{site.baseurl}}/news/archives" class="button radius" style="margin-bottom:0;">Release Archive &#x25B6;</a>
+				</div>
+			</div>
+		</div>

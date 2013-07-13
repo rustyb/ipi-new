@@ -1,19 +1,47 @@
 {% include html_head.html %}
+{% assign nav = 'left' %}
+{% assign nav1 = 'right' %}
 {% include main_nav.html %}
 
 		
-		<ul data-orbit>
-		  <li>
-		    <img src="http://placehold.it/1600x600&text=HeaderIMG1" />
-		    <div class="orbit-caption">...</div>
+		<ul data-orbit data-orbit data-options="bullets:false;resume_on_mouseout:true;" class="home">
+		  <li style="height:330px; background:url(http://farm6.staticflickr.com/5455/9151539046_e655389faf_h_d.jpg) center; bakcgroun-size:cover;">
+			
+		    <div class="row">
+				<div class="large-9 columns" style="margin-top:70px; color:#fff;background:rgba(81, 143, 154, .5);padding:20px;">
+					<a href="#blah">
+					<h2 style="margin-bottom:0;color:#fff;">Representing professional planners in Ireland</h2>
+					<p style="color:#fff;margin-bottom:0;">The independent professional body representing the majority of professional planners engaged in physical, spatial and environmental planning in Ireland.</p>
+					
+					</a>
+				</div>
+				
+			</div>
+		    
 		  </li>
-		  <li>
-		    <img src="http://placehold.it/1600x600&text=HeaderIMG2" />
-		    <div class="orbit-caption">...</div>
+		  <li style="height:330px; background:url(http://farm8.staticflickr.com/7103/6976469754_46291f77b1_h_d.jpg) center; bakcgroun-size:cover;">
+			<div class="row">
+				<div class="large-9 columns" style="margin-top:70px; color:#fff;background:rgba(81, 143, 154, .5);padding:20px;">
+					<a href="#blah">
+					<h2 style="margin-bottom:0;color:#fff;">National Planning Awards 2013 - 2014</h2>
+					<p style="color:#fff;margin-bottom:0;">Get your entries in now</p>
+					<p style="color:#fff;margin-bottom:0;text-decoration:underline;">Enter Now</p>
+					</a>
+				</div>
+			</div>
+		    
+		   
 		  </li>
-		  <li>
-		    <img src="http://placehold.it/1600x600&text=HeaderIMG3" />
-		    <div class="orbit-caption">...</div>
+		  <li style="height:330px; background:url(http://farm8.staticflickr.com/7390/9149309875_6af4c82078_h_d.jpg) center; bakcgroun-size:cover;">
+		    <div class="row">
+				<div class="large-9 columns" style="margin-top:70px; color:#fff;background:rgba(81, 143, 154, .5);padding:20px;">
+					<a href="#blah">
+					<h2 style="margin-bottom:0;color:#fff;">National Planning Awards 2013 - 2014</h2>
+					<p style="color:#fff;margin-bottom:0;">Get your entries in now</p>
+					<p style="color:#fff;margin-bottom:0;text-decoration:underline;">Enter Now</p>
+					</a>
+				</div>
+			</div>
 		  </li>
 		</ul>
 		
@@ -21,15 +49,30 @@
 		
 	
 
-<div class="row">
+<div class="row" style="margin-top:30px;">
 		<div class="large-12 columns">
-			<h3>THE LATEST<a href="#" class="small alert button right radius">MORE</a></h3>
+			<h3>THE LATEST<a href="{{site.baseurl}}/news" class="tiny secondary button right radius">NEWS FEED</a></h3>
 			<hr />
 		</div>
 	</div>
 	<div class="row">
 		<div class="large-12 columns">
 			<div class="row">
+			{% for post in site.categories.news limit:3 %}
+			
+				<div class="large-4 columns">
+					<div class="panel">
+						<strong>{{post.title}}</strong>
+						<p>{{post.snippet}}</p>
+						<hr />
+						<ul class="inline-list">
+				            <li>{{ post.date | date: "%d %b %Y" }}</li>
+				            <li><a href="{{ site.baseurl }}{{post.url}}">MORE</a></li>
+				        </ul>
+					</div>
+				</div>
+			{% endfor %}
+		<!--	<div class="row">
 				<div class="large-4 columns">
 					<div class="panel">
 						<strong>IPI welcomes Planning Regulator Announcement</strong>
@@ -62,7 +105,7 @@
 				            <li><a href="">MORE</a></li>
 				        </ul>
 					</div>
-				</div>			
+				</div>	-->		
 		</div>
 	</div>
 	
@@ -79,39 +122,28 @@
 				<!-- Main Feed -->
 			    <!-- This has been source ordered to come first in the markup (and on small devices) but to be to the right of the nav on larger screens -->
 			    
-
+{% for post in site.categories.events limit:2 %}
 			      <!-- Feed Entry -->
 			      <div class="row">
 			        <div class="large-2 columns small-3">
 			        	<div class="calendar_date">
-							<span class="day">22</span>
-							<span class="month">jun</span>
+							<span class="day">{{ post.day | date: "%d" }}</span>
+							<span class="month">{{ post.day | date: "%b" }}</span>
 						</div>
 			        </div>
 			        <div class="large-10 columns">
-			          <p><strong>National Planning Awards Closing Date</strong><br /> This year’s Energy Awards is a ten year celebration for inspired energy savers. It takes place in Dublin starting at 6PM.</p>
+					<a href="{{site.baseurl}}{{post.url}}">
+			          <p><strong>{{post.title}}</strong><br /> {{post.excerpt}}</p>
 			        </div>
+					</a>
 			      </div>
 			      <!-- End Feed Entry -->
 			      <hr />
-				 <!-- Feed Entry -->
-			      <div class="row">
-			        <div class="large-2 columns small-3">
-				<div class="calendar_date">
-					<span class="day">13</span>
-					<span class="month">NOV</span>
-				</div>
-				
-				</div>
-			        <div class="large-10 columns">
-			          <p><strong>YPN “Things they don’t teach you in Planning School” Planning and Politics in Ireland</strong> <br /> The series returns with a topical debate styled on the iconic "Yes Minister?" TCUBE, Dublin 6.30PM</p>
-			        </div>
-			      </div>
-			      <!-- End Feed Entry -->
-			      <hr />
+			{% endfor %}
+				 
 				  <div class="row">
 				  	<div class="large-12 columns">
-				  		<a href="#" class="button radius small">More Events</a>
+				  		<a href="{{site.baseurl}}/events" class="button radius small">More Events</a>
 				  	</div>
 				  </div>
 			</div>
