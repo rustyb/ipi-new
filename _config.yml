@@ -1,4 +1,3 @@
-baseurl: http://www.dublinspaceinvaders.co
 permalink: pretty
 paginate: 10
 relative_permalinks: true
