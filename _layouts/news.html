@@ -1,0 +1,115 @@
+{% include html_head.html %}
+{% assign nav = 'left' %}
+{% assign nav1 = 'right' %}
+{% include main_nav.html %}
+
+<!-- Header -->
+<div style="background:#28353d;">
+	<div class="row">
+		<div class="large-7 columns " style="padding:60px 30px 30px 30px;color:#fff;">
+
+			<h3 style="color:#fff;">{{page.title}}<small><br />{{ page.date | date: "%d %b %Y" }} | by Colin Broderick</small></h3>
+		</div>
+	</div>
+	
+</div>
+
+
+<!-- End Header -->
+
+<div class="row" style="margin-top:30px;">    
+    <!-- Nav Sidebar -->
+    <!-- This is source ordered to be pulled to the left on larger screens -->
+    <div class="large-3 push-9 columns">
+        <h3 class="home" style="background: #518F9A;
+		padding: 1em 0;
+		margin-bottom: 0;
+		color: #fff;">News</h3>
+		<div id="map_container" class="hide-for-small">
+			<img src="http://www.mapbox.com/img/team/justin.jpg" />
+		</div>
+		<div class="hide-for-small panel">
+			<small><a href="http://www.cbroderick.me">Justin Miller</a> brings a wealth of development experience to MapBox, having built apps for the iPhone & iPad, Mac, and the web, as well as administered a variety of UNIX platforms.</small>
+			
+		</div>
+      <ul class="side-nav">
+	
+		
+        <li><a href="#">Events Calendar</a></li>
+        <li><a href="#">National Planning Awards 2013</a></li>
+        <li><a href="#">National Planning Conference</a></li>
+        <li><a href="#">Autumn Planning Conference</a></li>
+        <li><a href="#">Submit Event</a></li>
+        <li><a href="#">Section 6</a></li>
+      </ul>
+      
+      <p><img src="http://placehold.it/320x240&text=Ad" /></p>
+       	
+    </div>
+    <!-- Main Content Section -->
+    <!-- This has been source ordered to come first in the markup (and on small devices) but to be to the right of the nav on larger screens -->
+ <div class="large-8 pull-4 columns prose">
+	
+	
+
+	<!--	<h3>{{page.title}} <small>Closing Date {{ page.close-date | date: "%d %b %Y" }}</small></h3> -->
+		<div id="map_container" class="hide-for-medium-up">
+			<img src="http://www.mapbox.com/img/team/justin.jpg" />
+		</div>
+		<div class="hide-for-medium-up">
+			<table style="width:100%">
+				<tr>
+					<th>Date</th>
+					<td>{{ page.day | date: "%d %b %Y" }}</td>
+				</tr>
+				<tr>
+					<th>Venue</th>
+					<td>{{page.location}}</td>
+				</tr>
+				<tr>
+					<th>Price</th>
+					<td>{{page.price}}</td>
+				</tr>
+				<tr>
+					<th>Organizer</th>
+					<td>{{page.organizer}}</td>
+				</tr>
+				<tr>
+					<th colspan="2"><a href="#register" class="button medium radius success">Register Now</a></th>
+				</tr>
+			</table>
+			
+		</div>
+      {{content}}
+
+      	
+</div>
+    
+
+
+    
+    
+</div>
+
+<div class=" pager-box">
+	{% if page.previous.url and page.next.url %}
+		        <a class="large-4 columns" href="{{ site.baseurl }}{{page.previous.url}}" title="Previous Post: {{page.previous.title}}">&#x25C0; Previous</a>
+				<a class="large-4 columns" href="{{ site.baseurl }}/news" title="Update Index">&#x25B2; News Releases</a>
+				<a class="large-4 columns" href="{{ site.baseurl }}{{page.next.url}}" title="Next Post: {{page.next.title}}">Next &#9654; </a>
+		{% else %}
+		{% if page.previous.url %}
+				<a class="large-6 columns" href="{{ site.baseurl }}{{page.previous.url}}" title="Previous Post: {{page.previous.title}}">&#x25C0; Previous</a>
+				<a class="large-6 columns" href="{{ site.baseurl }}/news" title="Update Index">&#x25B2; News Releases</a>
+		{% else %}
+			<a class="large-6 columns" href="{{ site.baseurl }}/news" title="Update Index">&#x25B2; News Releases</a>
+			<a class="large-6 columns" href="{{ site.baseurl }}{{page.next.url}}" title="Next Post: {{page.next.title}}">Next &#9654;</a>
+		{%endif%}
+	{% endif %}
+</div>
+	
+	
+
+
+{% include footer.html %}
+{% include html_end.html %}
+

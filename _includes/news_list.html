@@ -13,12 +13,15 @@
 		             </div><hr>
 		</article>-->
 		<article style="margin-bottom:50px;">
-		             <div class="row" style="background:#fff;">
-		             <div class="large-10 small-12 small-centered large-centered columns" >
-		                 	<h6 class="subheader" style="text-align:center;"><small><a href="{{ site.baseurl }}{{post.url}}">{{ post.date | date: "%d %b %Y" }}</a> | By Colin Broderick</small></h6>
-							<h5 style="text-align:center;"><a href="{{ site.baseurl }}{{post.url}}">{{ post.title }}</a></h5>
-							{{post.excerpt}}
-							<div class="read-more">
+		             <div class="row">
+		             <div class="large-11 small-12 small-centered large-centered columns" >
+							<div style="background:#fff;padding:30px;border-radius:4px;">
+								<h6 class="subheader" style="text-align:center;"><small><a href="{{ site.baseurl }}{{post.url}}">{{ post.date | date: "%d %b %Y" }}</a> | By Colin Broderick</small></h6>
+								<h5 style="text-align:center;"><a href="{{ site.baseurl }}{{post.url}}">{{ post.title }}</a></h5>
+								{{post.excerpt}}
+								
+							</div>
+		                 	<div class="read-more">
 								<a href="{{ site.baseurl }}{{post.url}}">Read More</a>
 							</div>
 							
