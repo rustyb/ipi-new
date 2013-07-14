@@ -3,7 +3,7 @@ title: Alice Charles Planning
 layout: page
 main_nav: no
 permalink: advice/planning-consultants/alice-charles-planning
-group: consultant
+group: consultants
 tags: [consultant]
 
 location: Dublin

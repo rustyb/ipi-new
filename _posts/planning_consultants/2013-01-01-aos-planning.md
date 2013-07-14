@@ -3,7 +3,7 @@ title: AOS Planning Limited
 layout: page
 main_nav: no
 permalink: advice/planning-consultants/aos-planning-limited
-group: consultant
+group: consultants
 tags: [consultant]
 
 location: Dublin

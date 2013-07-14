@@ -3,7 +3,7 @@ title: (AP) McCarthy Keville O’Sullivan Planning and Environmental Consultants
 layout: page
 main_nav: no
 permalink: advice/planning-consultants/ap-mccarthy-planning-consultants-ltd
-group: consultant
+group: consultants
 tags: [consultant]
 
 location: Galway
