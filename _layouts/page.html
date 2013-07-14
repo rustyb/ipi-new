@@ -7,6 +7,17 @@
 	<div class="row">
 		<div class="large-7 columns small-centered large-centered" style="text-align:center;padding:60px 30px 30px 30px;color:#fff;">
 			<h3 style="color:#fff;">{{page.title}}</h3>
+			{% for site.tags %}
+			{% if 'consultant' == page.group %}
+			<p class="consultants"><small>
+			
+				<span><img src="{{site.baseurl}}/img/phone.png"> {{page.phone}}</span>  <span><a href="{{page.website}}" target="_blank"><img src="{{site.baseurl}}/img/web.png"> {{page.website}}</a></span>
+				<span><img src="{{site.baseurl}}/img/location.png"> {{page.location}}</span>
+			
+			</small> 
+			 </p>
+			{% endif %}
+			{% endfor %}
 		</div>
 	</div>
 	
@@ -18,7 +29,7 @@
 <div class="row" style="margin-top:30px;">
 		
 	</div>
-	<div class="row">
+	<div class="row prose">
 		<div class="large-9 push-3 columns">
 			<div class="large-12 columns">
 			<!--	<h3>{{page.title}}</h3>
@@ -29,7 +40,9 @@
 			  <a href="{{site.baseurl}}/{{page.group}}">{{page.group}}</a>
 			  <a class="current" href="{{site.baseurl}}{{page.url}}">{{page.title}}</a>
 			</nav>-->
-			
+			{% if page.tags.consultant %}
+				<p style="text-align:center;	"><img src="{{page.image}}" /></p>
+			{% endif %}
 			{{content}}
 			</div>
 		</div>

@@ -78,7 +78,16 @@ span.day {
 	  float: left;
 	  width: 18.181818%;
 	}
-
+	.blog-archive .blog-consultant-detail {
+	  color: #8F99A0;
+	  margin-right: 0;
+	  border-right-width: 0;
+	  float: right;
+	  width: 18.181818%;
+	}
+	.blog-archive .blog-consultant {
+	  margin-right: 40%;
+	}
 	.blog-archive .blog-title {
 	  margin-left: 20%;
 	}
@@ -140,3 +149,7 @@ span.day {
 	.pager-box a:hover {
 	background-color: #435a66;
 	}
+#consultants .content {background:none;border:0;padding:0;}
+#consultants .title {border-bottom:1px solid #ccc}
+p.consultants span {padding-right:30px;}
+p.consultants span img {padding-right:5px;}
