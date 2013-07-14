@@ -1,0 +1,35 @@
+<div class="section-container tabs" data-section="tabs">
+  <section>
+    <p class="title" data-section-title><a href="#">List</a></p>
+    <div class="content" data-section-content>
+      <p>Content of section 1.</p>
+    </div>
+  </section>
+  <section>
+<p class="title" data-section-title><a href="#">Details</a></p>
+
+<div class="content" data-section-content>  
+{% for post in site.tags.consultant %}
+		<article style="margin-bottom:50px;">
+			
+						<div style="background:#fff;padding:30px;border-radius:4px;">
+						<div class="row">
+								<div class="large-4 columns">
+									<img src="{{post.image}}" />
+								</div>
+								<div class="large-8 columns">
+									<h5 style=""><a href="{{ site.baseurl }}{{post.url}}">{{ post.title }}</a></h5>
+									<p><small>{{post.location}}  | <a href="{{post.location}}" target="_blank">{{post.website}}</a> | {{post.phone}}</small></p>
+								</div>
+							</div>
+						</div>
+		                 	
+
+		             
+
+		</article>
+
+{% endfor %}
+</div>
+</section>
+</div>

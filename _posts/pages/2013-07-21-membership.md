@@ -1,5 +1,5 @@
 ---
-title: Membership and Careers
+title: Membership &amp; Careers
 layout: page
 main_nav: left
 permalink: membership_and_careers
