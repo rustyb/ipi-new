@@ -1,19 +1,25 @@
 ---
-title: National Planning Conference 2013
-layout: event
-day: 2013-07-23
-close-date: 2013-07-22
+published: true
+layout: 
+  - info
+  - event
+day: 2013-07-23T00:00:00.000Z
+"close-date": 2013-07-22T00:00:00.000Z
 location: Dublin
 price: Free
 organizer: GDA Branch
 category: events
 ---
+
 ![image](http://www.irishplanninginstitute.ie/uploads/images/4.jpg)
 **New Paradigms, Challenges and Opportunities of European Cities - The contribution of Spatial Planning to overcome the crisis**
 
 Children that are born today will live until 2090. We are also preparing our cities for them. How to do it? And how to combine the new paradigms, the new basis of cities life, with the overcome of the actual crisis?
 
 Keynote speakers confirmed until now: Bernardo Secchi, Louis Albrechts, Alain Bourdin, Joan Busquets, Oriol Nel.lo, Kevin Murray, Vincent Goodstadt, António Camara and Jaime Melo Baptista.
+
+
+![All-Island Transmission Map.jpg](/media/All-Island%20Transmission%20Map.jpg)
 
 It is necessary to have the theory and the best practices. Come to the 10th Biennial of European Towns and Town Planners, in Cascais. Bring us your professional experience, your questions and concerns, your answers and solutions. Together we will learn how to face the New Challenges, how to find New Opportunities, within the scope of New Paradigms.
 
