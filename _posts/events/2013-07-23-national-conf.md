@@ -1,8 +1,6 @@
 ---
 published: true
-layout: 
-  - info
-  - event
+layout: event
 day: 2013-07-23T00:00:00.000Z
 "close-date": 2013-07-22T00:00:00.000Z
 location: Dublin
@@ -19,7 +17,7 @@ Children that are born today will live until 2090. We are also preparing our cit
 Keynote speakers confirmed until now: Bernardo Secchi, Louis Albrechts, Alain Bourdin, Joan Busquets, Oriol Nel.lo, Kevin Murray, Vincent Goodstadt, António Camara and Jaime Melo Baptista.
 
 
-![All-Island Transmission Map.jpg](/media/All-Island%20Transmission%20Map.jpg)
+![All-Island Transmission Map.jpg]({{site.baseurl}}/media/All-Island%20Transmission%20Map.jpg)
 
 It is necessary to have the theory and the best practices. Come to the 10th Biennial of European Towns and Town Planners, in Cascais. Bring us your professional experience, your questions and concerns, your answers and solutions. Together we will learn how to face the New Challenges, how to find New Opportunities, within the scope of New Paradigms.
 
