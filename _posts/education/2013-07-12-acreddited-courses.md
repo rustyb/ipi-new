@@ -4,6 +4,7 @@ layout: page
 main_nav: no
 permalink: education/accredited-course
 group: education
+description: Find out how becoming an IPI member can improve your professional development.
 ---
 IPI ACCREDITED COURSES
 

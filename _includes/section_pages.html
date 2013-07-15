@@ -1,0 +1,15 @@
+{% for post in site.posts %}
+{% if page.group == post.group %}
+	<div class="large-4 columns">
+		<div >
+			<a href="{{ site.baseurl }}{{post.url}}">
+			<p><img style="width:100%"src="http://www.rtpi.org.uk/mimagegen.ashx?image=/media/10593/Become%20an%20RTPI%20Member.jpg&width=218&height=112&crop=true&rounded=false"></p>
+			<strong>{{post.title}}</strong>
+			<p style="color:#3c4e5a;line-height:1.3;font-size:0.9em;margin:0.5em 0;">{{ post.description }}</p>
+			<a style="color:#fff;margin-bottom:20px;padding:10px;background:#518F9A;display:block;width:100%;border-radius:0px 0px 4px 4px" href="{{ site.baseurl }}{{post.url}}">Read More</a></li>
+	        
+			</a>
+		</div>
+	</div>
+{% endif %}
+{% endfor %}

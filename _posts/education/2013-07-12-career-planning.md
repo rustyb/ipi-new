@@ -4,6 +4,7 @@ layout: page
 main_nav: no
 permalink: education/career-opportunities
 group: education
+description: Find out how becoming an IPI member can improve your professional development.
 ---
 
 Qualified planners in Ireland work in a range of sectors. The majority work in the public sector for Local Authorities or in the private sector representing and working with construction, community, public and other bodies through the planning process.

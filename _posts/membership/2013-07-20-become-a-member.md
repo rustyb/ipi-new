@@ -4,6 +4,7 @@ layout: page
 main_nav: no
 permalink: membership/join-the-ipi
 group: membership
+description: Find out how becoming an IPI member can improve your professional development.
 ---
 
 Membership of the IPI

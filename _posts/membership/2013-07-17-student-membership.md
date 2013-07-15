@@ -4,6 +4,7 @@ layout: page
 main_nav: no
 permalink: membership/student-membership
 group: membership
+description: Find out how becoming an IPI member can improve your professional development.
 ---
 Download:Student Application Form 
 
