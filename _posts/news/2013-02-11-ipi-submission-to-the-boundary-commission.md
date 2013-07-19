@@ -1,6 +1,10 @@
 ---
 published: false
-layout: page
+layout: news
+title: IPI Submission to the Boundary Commission
+category: news
+tags: 
+  - submissions
 ---
 
 IPI Submission to the Boundary Commission
