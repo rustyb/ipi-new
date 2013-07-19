@@ -1,9 +1,9 @@
 ---
 published: true
 layout: page
-title: "“Change is Possible\" Lessons from Cycling City Berlin"
-day: 2013-09-23T00:00:00.000Z
-close-date: 2013-09-22T00:00:00.000Z
+title: IPI YPN goes Rainbow Running
+day: 2013-07-26T00:00:00.000Z
+close-date: 2013-07-25T00:00:00.000Z
 location: Dublin
 price: Paid
 organizer: GDA Branch
