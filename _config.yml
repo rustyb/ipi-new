@@ -15,13 +15,9 @@ prose:
           value: "Please Change me to a the proper Title"
       - name: "layout"
         field:
-          element: "select"
+          element: "text"
           label: "Layout"
-          placeholder: "Select an Item"
-          options:
-            - name: "info"
-              value: "info"
-          selected: "info"
+          value: "page"
       - name: "image"
         field:
           element: "string"
