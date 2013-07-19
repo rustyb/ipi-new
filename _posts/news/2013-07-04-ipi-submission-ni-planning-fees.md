@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 layout: news
 title: IPI Submission to the Department of the Environment Northern (Amendment to NI Planning Fees 2013)
 category: news

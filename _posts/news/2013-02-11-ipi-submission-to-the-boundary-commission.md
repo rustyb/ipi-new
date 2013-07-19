@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 layout: news
 title: IPI Submission to the Boundary Commission
 category: news
