@@ -1,12 +1,12 @@
 ---
+published: true
 title: Accredited Courses
 layout: page
-main_nav: no
-permalink: education/accredited-course
+main_nav: "no"
+permalink: "education/accredited-course"
 group: education
 description: Find out how becoming an IPI member can improve your professional development.
 ---
-IPI ACCREDITED COURSES
 
 The IPI inspects and accredits on invitation a number of planning courses across the island of Ireland. A list of currently accredited courses is shown below.
 
