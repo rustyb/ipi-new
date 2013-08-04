@@ -1,12 +1,13 @@
 ---
 published: true
 layout: event
-day: 2013-07-23T00:00:00.000Z
-"close-date": 2013-07-22T00:00:00.000Z
+day: {}
+"close-date": {}
 location: Dublin
 price: Free
 organizer: GDA Branch
 category: events
+title: IPI Planning Conference 2013
 ---
 
 ![image](http://www.irishplanninginstitute.ie/uploads/images/4.jpg)
